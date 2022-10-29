@@ -21,14 +21,9 @@ Unique mobile application allows students in one-click:
 
 ## How it works:
 
-![image](https://user-images.githubusercontent.com/60985658/198846607-505e122a-0937-4691-a869-c658ad6f33c5.png)
-![image](https://user-images.githubusercontent.com/60985658/198846722-b95f611f-4e13-450b-865e-b0fa23e9726d.png)
-![image](https://user-images.githubusercontent.com/60985658/198846766-bf805989-91c1-4a72-a390-3bb6563ea7ef.png)
-![image](https://user-images.githubusercontent.com/60985658/198846859-ca9e70bf-743d-4b47-89dd-05e45afbcb08.png)
-![image](https://user-images.githubusercontent.com/60985658/198846872-55936768-cf30-47f6-b218-a0c0da75b5d6.png)
-![image](https://user-images.githubusercontent.com/60985658/198846897-ae780f03-086c-4aeb-8110-dd0c26c674c6.png)
-![image](https://user-images.githubusercontent.com/60985658/198846934-1a4e3789-457d-485f-aae7-f35b9ab0b122.png)
-![image](https://user-images.githubusercontent.com/60985658/198846943-d94040e4-ebbc-42ae-abf8-404736f46354.png)
+![image](https://user-images.githubusercontent.com/60985658/198847238-26729b46-88e3-4de2-970d-371211f9a346.png)
+![image](https://user-images.githubusercontent.com/60985658/198847278-aefe8acd-51fd-473a-828b-f5713d08a686.png)
+
 
 
 
