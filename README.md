@@ -2,20 +2,30 @@
 
 Mobile App Name : 42 Abu Dhabi
 
-Problems:
+## Problems:
 - Outdated securities’ methodology for identifying students.
 - No convenient system for helping each other with students;
 - It’s hard to open evaluation slots on intra mobile version;
 - Not integrated chat (we use third party apps like Slack, Telegram);
 
-Solution:
-Unique mobile application allows students to one-click:
+## Solution:
+Unique mobile application allows students in one-click:
 - help each other;
 - create and delete slots;
 - instantly contact an evaluator;
-- unified notification system;
-- By scanning with QR Code, the Securities can identify and register each student by QR-code;
+- get access to unified notification system;
+- By scanning student's QR Code, the Securities can identify and register each student;
 - fast student’s register for rest room.
+
+## How it works
+
+![image](https://user-images.githubusercontent.com/60985658/198846607-505e122a-0937-4691-a869-c658ad6f33c5.png)
+
+
+
+
+
+
 
 ## Team members :
 
