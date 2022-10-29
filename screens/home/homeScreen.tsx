@@ -7,6 +7,7 @@ import {
   Icon,
   Text,
   View,
+  VStack,
 } from "native-base";
 import React from "react";
 import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
@@ -42,10 +43,20 @@ const HomeScreen = () => {
       </Box>
 
       <Center mt={10}>
-        <View bg={Color.secondary} p={10} borderRadius={20}>
-          <Heading color={Color.white}>Ahmed Mohammed</Heading>
-          <Text color={Color.white}>moha@student.42abudhabi.ae</Text>
-        </View>
+        <VStack space={2} bg={Color.secondary} p={6} borderRadius={20}>
+          <View borderRadius={20}>
+            <Heading color={Color.white}>Ahmed Mohammed</Heading>
+            <Text color={Color.white}>moha@student.42abudhabi.ae</Text>
+          </View>
+          <View borderRadius={20}>
+            <Heading color={Color.white}>Ahmed Mohammed</Heading>
+            <Text color={Color.white}>moha@student.42abudhabi.ae</Text>
+          </View>
+          <View borderRadius={20}>
+            <Heading color={Color.white}>Ahmed Mohammed</Heading>
+            <Text color={Color.white}>moha@student.42abudhabi.ae</Text>
+          </View>
+        </VStack>
       </Center>
     </Box>
   );
