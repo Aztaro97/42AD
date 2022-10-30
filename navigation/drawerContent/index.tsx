@@ -117,7 +117,7 @@ const DrawerNavigation = (props: DrawerContentComponentProps) => {
     {
       label: "Home",
       icon: <Feather name="home" size={20} color="#fff" />,
-      link: "Orders",
+      link: "HomeListTab",
     },
     {
       label: "Users",

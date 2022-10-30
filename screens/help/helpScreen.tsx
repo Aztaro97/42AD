@@ -15,13 +15,13 @@ import { Color } from "../../constants/Colors";
 const HelpScreen = () => {
   return (
     <Box flex={1}>
-      <Box bg={Color.secondary} w="full" h={100} alignItems="center">
+      <Box bg={Color.secondary} w="full" h={50} alignItems="center">
         <Heading textAlign={"center"} bold color={Color.white}>
           Looking for help
         </Heading>
       </Box>
 
-      <VStack space={2}> 
+      <VStack space={2} px={3} mt={4}>
         <Card />
         <Card />
       </VStack>
@@ -31,11 +31,17 @@ const HelpScreen = () => {
 
 const Card = () => {
   return (
-    <VStack bg={Color.secondary} p={2}>
-      <Heading color={Color.white}>Born2beroot</Heading>
+    <VStack bg={Color.secondary} p={4} borderRadius={10}>
+      <Heading color={Color.white} mb={2}>
+        Born2beroot
+      </Heading>
       <HStack justifyContent={"space-between"} alignItems="center">
-        <View>
-          <Icon color={Color.thirdly} as={<Octicons name="checklist" size={24} color="black" />} />
+        <View flexDir={"row"} alignItems="center">
+          <Icon
+            color={Color.thirdly}
+            mr={3}
+            as={<Octicons name="checklist" size={24} color="black" />}
+          />
           <Text color={Color.white} bold>
             szubair
           </Text>
