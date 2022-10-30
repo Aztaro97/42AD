@@ -1,3 +1,11 @@
+## Team members :
+
+- Yonatan Moges
+- Veronika Liubitskaia
+- Samiya Zubair
+- Oaufa Talha
+- Abdoul Aziz Taro
+
 ## Project Description
 
 Mobile App Name : 42 Abu Dhabi
@@ -21,7 +29,8 @@ Unique mobile application allows students in one-click:
 
 ## How it works:
 
-![image](https://user-images.githubusercontent.com/60985658/198848812-48eb70c1-9c98-4d71-b8c5-b7734e556d46.png)
+![image](https://user-images.githubusercontent.com/60985658/198872544-ab5873a8-d95a-4f9c-bce0-ba1b3ac8d585.png)
+![image](https://user-images.githubusercontent.com/60985658/198872646-8ad1f99d-b9e3-4b9d-abb0-ec7245e54a91.png)
 
 
 
@@ -32,13 +41,8 @@ Unique mobile application allows students in one-click:
 
 
 
-## Team members :
 
-- Yonatan Moges
-- Veronika Liubitskaia
-- Samiya Zubair
-- Aliaksandr Dziaruha
-- Abdoul Aziz Taro
+
 
 ## Pre development
 
