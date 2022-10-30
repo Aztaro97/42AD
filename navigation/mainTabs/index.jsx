@@ -115,12 +115,12 @@ const MainTabsScreen = () => {
       />
 
       <Tab.Screen
-        name="Tabs"
+        name="HelpTabs"
         component={HelpScreen}
         options={{
           tabBarLabel: "Help",
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="users" size={size} color={color} />
+            <FontAwesome5 name="hand-paper" size={size} color={color} />
           ),
 
           //   headerShown: false,
@@ -154,7 +154,7 @@ const HomeStackScreen = () => {
       <HomeStack.Screen name="Home" component={HomeScreen} />
       <HomeStack.Screen
         name="Profile"
-        options={{ headerShown: true }}
+        options={{ headerShown: false }}
         component={ProfileScreen}
       />
     </HomeStack.Navigator>

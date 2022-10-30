@@ -8,7 +8,7 @@ const BarQrCode = () => {
       flex={1}
       justifyContent="center"
       alignItems={"center"}
-      bg={Color.secondary}
+      bg={Color.primary}
 	  opacity=".95"
       safeArea
     >

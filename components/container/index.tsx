@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { Heading, NativeBaseProvider, View } from "native-base";
 import { StreamChat } from "stream-chat";
+import { Provider } from "react-redux";
 import { OverlayProvider, Chat, ChatContextValue } from "stream-chat-expo";
 import React, { useCallback, useEffect, useState } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -18,6 +19,7 @@ import {
 } from "@expo-google-fonts/raleway";
 import theme from "../../theme";
 import { AuthenticatedUserProvider } from "../../contexts/AuthenticatedUserProvider";
+import { store } from "../../store";
 
 interface Props {
   children: React.ReactNode;
@@ -73,19 +75,21 @@ const AppContainer = ({ children }: Props) => {
 
   return (
     <SafeAreaProvider>
-      <AuthenticatedUserProvider>
-        <OverlayProvider>
-          <Chat client={client}>
-            <NavigationContainer>
-              <NativeBaseProvider theme={theme}>
-                <View onLayout={onLayoutRootView} />
-                <AnimatePresence>{children}</AnimatePresence>
-                <StatusBar />
-              </NativeBaseProvider>
-            </NavigationContainer>
-          </Chat>
-        </OverlayProvider>
-      </AuthenticatedUserProvider>
+      <Provider store={store}>
+        <AuthenticatedUserProvider>
+          <OverlayProvider>
+            <Chat client={client}>
+              <NavigationContainer>
+                <NativeBaseProvider theme={theme}>
+                  <View onLayout={onLayoutRootView} />
+                  <AnimatePresence>{children}</AnimatePresence>
+                  <StatusBar />
+                </NativeBaseProvider>
+              </NavigationContainer>
+            </Chat>
+          </OverlayProvider>
+        </AuthenticatedUserProvider>
+      </Provider>
     </SafeAreaProvider>
   );
 };

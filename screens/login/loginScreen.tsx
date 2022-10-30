@@ -20,6 +20,7 @@ import {
   ImageBackground,
   StyleSheet,
 } from "react-native";
+import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import React, { useEffect, useState } from "react";
@@ -36,6 +37,8 @@ import {
   makeRedirectUri,
 } from "expo-auth-session";
 import * as WebBrowser from "expo-web-browser";
+import { useDispatch } from "react-redux";
+import { generate42Token } from "../../store/features/authSlides";
 
 const { height, width } = Dimensions.get("window");
 
@@ -45,38 +48,39 @@ const authorizationEndPoint =
 
 const LoginScreen = () => {
   WebBrowser.maybeCompleteAuthSession();
+  const [code, setCode] = useState<null>(null);
   const [request, response, promptAsync] = useAuthRequest(
     {
       clientId: CLIENT_ID_42,
       clientSecret: CLIENT_SECRET_42,
-      redirectUri: makeRedirectUri({ useProxy: true }),
-      responseType: ResponseType.Token,
+      redirectUri: "https://auth.expo.io/@taro97/42AbuDhabi/",
+      responseType: "code",
     },
     { authorizationEndpoint: authorizationEndPoint, useProxy: true }
   );
 
   const navigation = useNavigation();
-
-  //   response && console.log(response)
-  //   request && console.log(request)
-
-  const { setUser } = useContext(AuthenticatedUserContext);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (response?.type === "success") {
       const { access_token } = response.params;
       console.log(access_token);
-      setUser(response.params);
+      setCode(response.params?.code);
     }
   }, [response]);
 
+  useEffect(() => {
+    code && dispatch(generate42Token(code));
+  }, [code]);
+
   return (
-    <Box flex={1} background={Color.primary} h="full">
+    <Box flex={1} bg="#d3d3d398" h="full" safeArea>
       <ImageBackground
-        source={require("../../assets/images/bgImage.png")}
+        source={require("../../assets/images/bgImage.jpg")}
         style={styles.bgImage}
       >
-        <Center>
+        <Center mt={"1/2"}>
           <Image
             source={require("../../assets/images/logo.png")}
             alt="bgImage"
@@ -84,27 +88,27 @@ const LoginScreen = () => {
             w={200}
           />
         </Center>
+        <Center flex={1} justifyContent="flex-end" mb={10} px={5}>
+          <Button
+            style={styles.login__button}
+            px={20}
+            mb={2}
+            size={"lg"}
+            color={Color.thirdly}
+            _text={{
+              fontWeight: "bold",
+              color: Color.thirdly,
+            }}
+            onPress={() => promptAsync({ useProxy })}
+          >
+            Log in
+          </Button>
+          <Text color="#ffffff83">
+            By continuing you agree that you have read and accept out T&Cs and
+            Privacy Policy.
+          </Text>
+        </Center>
       </ImageBackground>
-      <Center flex={1} justifyContent="flex-end" mb={10} px={5}>
-        <Button
-          style={styles.login__button}
-          px={20}
-          mb={2}
-          size={"lg"}
-          color={Color.thirdly}
-          _text={{
-            fontWeight: "bold",
-            color: Color.thirdly,
-          }}
-          onPress={() => promptAsync({ useProxy })}
-        >
-          Log in
-        </Button>
-        <Text color="#ffffff83">
-          By continuing you agree that you have read and accept out T&Cs and
-          Privacy Policy.
-        </Text>
-      </Center>
     </Box>
   );
 };
@@ -115,7 +119,8 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
     alignItems: "center",
-    height: height / 1.3,
+    height: height,
+	width: width,
   },
 
   login__button: {

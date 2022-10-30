@@ -8,15 +8,24 @@ import LoaderSpinner from "../components/loaderSpinner";
 import { Box } from "native-base";
 import { CLIENT_ID_42, CLIENT_SECRET_42 } from "@env";
 import Fast42 from "@codam/fast42";
+import { useTypeSelector } from "../hook/useTypeSelector";
+import { useDispatch } from "react-redux";
+import { getUserInfo } from "../store/features/authSlides";
 
 // import UseAuthenticate from "../hook/useAuthenticate";
 
 const AuthRoutes = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
   //   const { api } = useAuthenticate();
+  const dispatch = useDispatch();
+
+  const { token, userInfo, isLoading } = useTypeSelector((state) => state.auth);
 
   const { user } = useContext(AuthenticatedUserContext);
+
+  useEffect(() => {
+    console.log("userInfo", userInfo);
+    token && dispatch(getUserInfo());
+  }, [token]);
 
   if (isLoading)
     return (
@@ -25,7 +34,7 @@ const AuthRoutes = () => {
       </Box>
     );
 
-  return <>{!user ? <RootStackScreen /> : <AuthStackScreen />}</>;
+  return <>{userInfo ? <RootStackScreen /> : <AuthStackScreen />}</>;
 };
 
 export default AuthRoutes;
