@@ -3,7 +3,7 @@
 - Yonatan Moges
 - Veronika Liubitskaia
 - Aliaksandr Dziaruha
-- Oaufa Talha
+- Ouafa Talha
 - Abdoul Aziz Taro
 
 ## Project Description
