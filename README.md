@@ -5,6 +5,7 @@
 - Aliaksandr Dziaruha
 - Ouafa Talha
 - Abdoul Aziz Taro
+- Samiya Zubair
 
 ## Project Description
 
