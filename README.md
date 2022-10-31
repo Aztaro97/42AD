@@ -1,3 +1,11 @@
+## Team members :
+
+- Yonatan Moges
+- Veronika Liubitskaia
+- Aliaksandr Dziaruha
+- Ouafa Talha
+- Abdoul Aziz Taro
+
 ## Project Description
 
 Mobile App Name : 42 Abu Dhabi
@@ -12,16 +20,16 @@ Mobile App Name : 42 Abu Dhabi
 ## Solution:
 
 Unique mobile application allows students in one-click:
+- By scanning student's QR Code, the Securities can identify and register each student;
 - help each other;
 - create and delete slots;
 - instantly contact an evaluator;
-- get access to unified notification system;
-- By scanning student's QR Code, the Securities can identify and register each student;
-- fast student’s register for rest room.
+- fast student’s register for relax room.
 
 ## How it works:
 
-![image](https://user-images.githubusercontent.com/60985658/198848812-48eb70c1-9c98-4d71-b8c5-b7734e556d46.png)
+![image](https://user-images.githubusercontent.com/60985658/198872905-d092bb1f-a956-49b3-9dde-650ff0407394.png)
+![image](https://user-images.githubusercontent.com/60985658/198872646-8ad1f99d-b9e3-4b9d-abb0-ec7245e54a91.png)
 
 
 
@@ -32,13 +40,8 @@ Unique mobile application allows students in one-click:
 
 
 
-## Team members :
 
-- Yonatan Moges
-- Veronika Liubitskaia
-- Samiya Zubair
-- Aliaksandr Dziaruha
-- Abdoul Aziz Taro
+
 
 ## Pre development
 
