@@ -6,7 +6,7 @@ import { Color } from "../../constants/Colors";
 
 const SlotComponent = () => {
   return (
-    <Box flex={1}>
+    <Box flex={1} bg={Color.primary}>
       <Text>Slot</Text>
     </Box>
   );
@@ -14,7 +14,7 @@ const SlotComponent = () => {
 
 const EvaluationComponent = () => {
   return (
-    <Box flex={1}>
+    <Box flex={1} bg={Color.primary}>
       <Text>Slot</Text>
     </Box>
   );

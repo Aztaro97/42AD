@@ -47,7 +47,7 @@ const ChatListScreen = () => {
   };
 
   return (
-    <Box flex={1} bg={"white"}>
+    <Box flex={1} bg={Color.primary}>
       <HeaderChatSearch setTextInput={setTextInput} textInput={textInput} />
       <ChannelList
         PreviewTitle={CustomPreviewTitle}

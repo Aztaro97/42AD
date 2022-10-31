@@ -18,7 +18,7 @@ import { Color } from "../../constants/Colors";
 import { useTypeSelector } from "../../hook/useTypeSelector";
 
 const HomeScreen = () => {
-  const { userInfo } = useTypeSelector((state) => state.auth);
+  const { userInfo, isLoading } = useTypeSelector((state) => state.auth);
 
   const {
     id,
@@ -35,6 +35,10 @@ const HomeScreen = () => {
   //     blackholed_at,
   //     user: { wallet },
   //   } = cursus[1];
+
+  if (isLoading) {
+    return <Text>...</Text>;
+  }
 
   return (
     <Box flex={1} bg={Color.primary}>
@@ -77,7 +81,7 @@ const HomeScreen = () => {
               Black hole
             </Heading>
             <Text color={Color.thirdly} fontSize={20}>
-              {/* {formatDistanceToNow(new Date(cursus[1]?.blackholed_at))} */}
+              {formatDistanceToNow(new Date(cursus[1]?.blackholed_at))}
             </Text>
           </Center>
           <Center borderRadius={20}>
@@ -107,7 +111,7 @@ const HomeScreen = () => {
                   mr={2}
                 ></Box>
                 <Text color={Color.thirdly} bold>
-                  {/* level {cursus[1]?.level} */}
+                  level {cursus[1]?.level}
                 </Text>
               </Flex>
               <Text color={Color.thirdly} bold>

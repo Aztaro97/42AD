@@ -14,7 +14,7 @@ import { Color } from "../../constants/Colors";
 
 const HelpScreen = () => {
   return (
-    <Box flex={1}>
+    <Box flex={1} bg={Color.primary}>
       <Box bg={Color.secondary} w="full" h={50} alignItems="center">
         <Heading textAlign={"center"} bold color={Color.white}>
           Looking for help
